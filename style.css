@@ -5,26 +5,58 @@
 
 body {
     font-family: monospace;
+    font-size: 32px;
+}
+
+header {
+    height: 8vh;
+    background-color: black;
+    color: white;
+}
+
+main {
+    background-color: #090416;
+    color: white;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    margin-block: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer {
+    height: 7vh;
+    background-color: black;
+    color: white;
 }
 
 .grupoComandos {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
+    margin-inline: 10px;
 }
 
 .cartaoComando {
-    width: calc(25% - 15px);
-    border: 1px solid #000000;
+    width: calc(25% - 20px);
+    border: 1px solid #49dd36;
     border-radius: 15px;
     padding: 10px 5px;
     transition: 150ms;
-    background-color: #d0dcfc;
+    background-color: #070b14;
+    color: #30c023;
 }
 
 .cartaoComando:hover {
-    scale: 105%;
-    background-color: #a0b8f8;
+    scale: 102%;
+    background-color: #30c023;
+    border: 1px solid #5cf848;
+    color: #f7fdbc;
     transform: translateY(-5%);
+    box-shadow: -3px -3px 3px 1px #48f8e9,
+                3px 3px 3px 1px #f848a0;
 }
