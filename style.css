@@ -5,9 +5,31 @@
 }
 
 body {
-  background-color: #202020;
-  color: #eaeaff;
+  background-color: #e9f8ff;
+  color: #16425b;
   font-family: monospace;
+  font-size: large;
+  padding: 10px;
+}
+
+header {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-weight: 900;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 15px;
 }
 
 .grupoComandos {
@@ -17,22 +39,91 @@ body {
 }
 
 .cartaoComando {
-  border: 1px solid #00ff00;
+  border: 1px solid #151515;
+  background-color: #fafafa;
   border-radius: 20px;
+  padding: 10px 15px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
   width: 85vw;
-  height: 20vh;
+  min-height: 20vh;
 }
 
-@media screen and (min-width: 768px) {
+.cartaoComando p {
+  font-size: x-large;
+}
+
+.cartaoTitulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 25%;
+}
+
+.cartaoTitulo h3 {
+  width: 80%;
+}
+
+.icone {
+  height: 30px;
+  width: 30px;
+  fill: #f5b460;
+  stroke: #151515;
+  stroke-width: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    font-size: x-large;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .grupoComandos {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   .cartaoComando {
-    border: 1px solid #ff0000;
-    border-radius: 20px;
-    width: calc(25% - 15px);
-    min-height: fit-content;
+    width: calc(50vw - 30px);
+  }
+
+  .icone {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .cartaoComando {
+    transition: 100ms;
+  }
+
+  .cartaoComando:hover {
+    scale: 102%;
+    box-shadow: 0px 5px 3px #c3d2d4;
+  }
+
+  .cartaoComando p {
+    font-size: xx-large;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    min-height: 80vh;
+    margin-block: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cartaoComando {
+    width: calc(25vw - 20px);
+  }
+
+  .icone {
+    height: 50px;
+    width: 50px;
   }
 }
