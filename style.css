@@ -1,6 +1,13 @@
-* {
+* { /* Também chamado de componente Reset */
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #202020;
+  color: #eaeaff;
+  font-family: monospace;
 }
 
 .grupoComandos {
@@ -10,7 +17,7 @@
 }
 
 .cartaoComando {
-  border: 1px solid #ff0000;
+  border: 1px solid #00ff00;
   border-radius: 20px;
   width: 85vw;
   height: 20vh;
